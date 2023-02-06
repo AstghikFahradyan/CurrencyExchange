@@ -10,14 +10,9 @@ using Serilog.Formatting.Json;
 using Serilog;
 using System.Text;
 
-Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console(new JsonFormatter())
-    .WriteTo.Seq("http://localhost:7257")
-    .WriteTo.File("log.txt")
-    .CreateLogger();
+Log.Logger = new LoggerConfiguration().CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 // Add services to the container.
 builder.Services.AddHttpClient();
@@ -42,7 +37,7 @@ builder.Services.AddAuthentication(opt =>
 builder.Services.AddControllers();
 
 builder.Host.UseSerilog((ctx, lc) => lc
-      .WriteTo.File("log.txt").WriteTo.Console());
+      .WriteTo.Seq("http://localhost:7257").WriteTo.File("log.txt").WriteTo.Console());
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -58,25 +53,23 @@ builder.Services.AddSwaggerGen(options =>
         Type = SecuritySchemeType.Http
     });
     options.AddSecurityRequirement(new OpenApiSecurityRequirement {
-        {
-            new OpenApiSecurityScheme {
-                Reference = new OpenApiReference {
-                    Id = "Bearer",
-                        Type = ReferenceType.SecurityScheme
-                }
-            },
-            new List<string>()
-        }
-    });
+    {
+        new OpenApiSecurityScheme {
+            Reference = new OpenApiReference {
+                Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+            }
+        },
+        new List<string>()
+    }
 });
-
+});
 
 builder.Services.AddDbContext<TransactionContext>(opts => opts.UseSqlServer(builder.Configuration["ConnectionString:BankDB"]));
 builder.Services.AddScoped<IDataRepository<Transaction>, TransactionManager>();
 builder.Services.AddScoped<IExchangService, ExchangService>();
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -86,11 +79,10 @@ if (app.Environment.IsDevelopment())
 }
 app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
 
 app.Run();

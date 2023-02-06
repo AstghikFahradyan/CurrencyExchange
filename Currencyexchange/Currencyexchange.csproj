@@ -35,4 +35,8 @@
   <ItemGroup>
     <None Remove="Serilog.Extensions.Logging.File" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
 </Project>

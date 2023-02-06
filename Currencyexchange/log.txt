@@ -1,0 +1,82 @@
+2023-02-06 16:03:57.450 +04:00 [INF] User profile is available. Using 'C:\Users\astghik.fahradyan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-06 16:03:57.931 +04:00 [INF] Now listening on: https://localhost:7257
+2023-02-06 16:03:57.983 +04:00 [INF] Now listening on: http://localhost:5056
+2023-02-06 16:03:57.989 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-06 16:03:57.990 +04:00 [INF] Hosting environment: Development
+2023-02-06 16:03:57.991 +04:00 [INF] Content root path: C:\Users\astghik.fahradyan\Desktop\Currencyexchange\Currencyexchange\Currencyexchange
+2023-02-06 16:04:00.006 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/swagger/index.html - -
+2023-02-06 16:04:00.313 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/swagger/index.html - - - 200 - text/html;charset=utf-8 306.1841ms
+2023-02-06 16:04:00.336 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/_framework/aspnetcore-browser-refresh.js - -
+2023-02-06 16:04:00.337 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/_vs/browserLink - -
+2023-02-06 16:04:00.353 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 16.2502ms
+2023-02-06 16:04:00.775 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 437.8396ms
+2023-02-06 16:04:00.852 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/swagger/v1/swagger.json - -
+2023-02-06 16:04:01.038 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 185.5866ms
+2023-02-06 16:04:06.104 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/api/transaction - -
+2023-02-06 16:04:06.213 +04:00 [INF] Executing endpoint 'Currencyexchange.Controllers.TransactionController.Get (Currencyexchange)'
+2023-02-06 16:04:06.225 +04:00 [INF] Route matched with {action = "Get", controller = "Transaction"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Currencyexchange.Controllers.TransactionController (Currencyexchange).
+2023-02-06 16:04:06.502 +04:00 [INF] Executing action method Currencyexchange.Controllers.TransactionController.Get (Currencyexchange) - Validation state: "Valid"
+2023-02-06 16:04:06.505 +04:00 [INF] Get all
+2023-02-06 16:04:06.509 +04:00 [INF] Executed action method Currencyexchange.Controllers.TransactionController.Get (Currencyexchange), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.3212ms.
+2023-02-06 16:04:06.519 +04:00 [INF] Executing OkObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[Currencyexchange.Models.Transaction, Currencyexchange, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-06 16:04:07.819 +04:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[AmountFor], [t].[AmountTo], [t].[DateOfTransaction], [t].[ExchangeKey], [t].[ExchangeType], [t].[ExchangeValue], [t].[Status]
+FROM [Transactions] AS [t]
+2023-02-06 16:04:07.935 +04:00 [INF] Executed action Currencyexchange.Controllers.TransactionController.Get (Currencyexchange) in 1704.2768ms
+2023-02-06 16:04:07.938 +04:00 [INF] Executed endpoint 'Currencyexchange.Controllers.TransactionController.Get (Currencyexchange)'
+2023-02-06 16:04:07.943 +04:00 [INF] HTTP GET /api/transaction responded 200 in 1830.7012 ms
+2023-02-06 16:04:07.954 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/api/transaction - - - 200 - application/json;+charset=utf-8 1850.0782ms
+2023-02-06 16:17:50.604 +04:00 [INF] User profile is available. Using 'C:\Users\astghik.fahradyan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-06 16:17:50.948 +04:00 [INF] Now listening on: https://localhost:7257
+2023-02-06 16:17:50.978 +04:00 [INF] Now listening on: http://localhost:5056
+2023-02-06 16:17:50.980 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-06 16:17:50.981 +04:00 [INF] Hosting environment: Development
+2023-02-06 16:17:50.984 +04:00 [INF] Content root path: C:\Users\astghik.fahradyan\Desktop\Currencyexchange\Currencyexchange\Currencyexchange
+2023-02-06 16:17:53.266 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/swagger/index.html - -
+2023-02-06 16:17:53.587 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/swagger/index.html - - - 200 - text/html;charset=utf-8 323.1155ms
+2023-02-06 16:17:53.773 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/_framework/aspnetcore-browser-refresh.js - -
+2023-02-06 16:17:53.779 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/_vs/browserLink - -
+2023-02-06 16:17:53.845 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 72.3606ms
+2023-02-06 16:17:54.034 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 254.9065ms
+2023-02-06 16:17:54.170 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7257/swagger/v1/swagger.json - -
+2023-02-06 16:17:54.423 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7257/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 252.5804ms
+2023-02-06 16:18:17.574 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7257/api/Auth/login application/json 55
+2023-02-06 16:18:17.696 +04:00 [INF] Executing endpoint 'Currencyexchange.Controllers.AuthController.Login (Currencyexchange)'
+2023-02-06 16:18:17.725 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Currencyexchange.Models.LoginModel) on controller Currencyexchange.Controllers.AuthController (Currencyexchange).
+2023-02-06 16:18:17.852 +04:00 [INF] Executing action method Currencyexchange.Controllers.AuthController.Login (Currencyexchange) - Validation state: "Valid"
+2023-02-06 16:18:18.134 +04:00 [INF] Executed action method Currencyexchange.Controllers.AuthController.Login (Currencyexchange), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 273.3643ms.
+2023-02-06 16:18:18.146 +04:00 [INF] Executing OkObjectResult, writing value of type 'Currencyexchange.Models.AuthenticatedResponse'.
+2023-02-06 16:18:18.155 +04:00 [INF] Executed action Currencyexchange.Controllers.AuthController.Login (Currencyexchange) in 423.401ms
+2023-02-06 16:18:18.161 +04:00 [INF] Executed endpoint 'Currencyexchange.Controllers.AuthController.Login (Currencyexchange)'
+2023-02-06 16:18:18.163 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 580.8624 ms
+2023-02-06 16:18:18.165 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7257/api/Auth/login application/json 55 - 200 - application/json;+charset=utf-8 591.1983ms
+2023-02-06 16:18:46.164 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7257/api/transaction application/json 43
+2023-02-06 16:18:46.246 +04:00 [INF] Executing endpoint 'Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange)'
+2023-02-06 16:18:46.260 +04:00 [INF] Route matched with {action = "Exchang", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.ValueTask`1[Microsoft.AspNetCore.Mvc.IActionResult] Exchang(Currencyexchange.Models.ExchangRequest) on controller Currencyexchange.Controllers.TransactionController (Currencyexchange).
+2023-02-06 16:18:46.488 +04:00 [INF] Executing action method Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange) - Validation state: "Valid"
+2023-02-06 16:18:52.211 +04:00 [INF] The operation has timed out.
+2023-02-06 16:18:52.213 +04:00 [INF] Empty request result to https://api.apilayer.com/exchangerates_data/latest
+2023-02-06 16:18:52.217 +04:00 [INF] Executed action method Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5726.2459ms.
+2023-02-06 16:18:52.220 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Single'.
+2023-02-06 16:18:52.224 +04:00 [INF] Executed action Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange) in 5960.6351ms
+2023-02-06 16:18:52.231 +04:00 [INF] Executed endpoint 'Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange)'
+2023-02-06 16:18:52.233 +04:00 [INF] HTTP POST /api/transaction responded 200 in 6065.1230 ms
+2023-02-06 16:18:52.238 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7257/api/transaction application/json 43 - 200 - application/json;+charset=utf-8 6073.7550ms
+2023-02-06 16:19:05.237 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7257/api/transaction application/json 43
+2023-02-06 16:19:05.244 +04:00 [INF] Executing endpoint 'Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange)'
+2023-02-06 16:19:05.245 +04:00 [INF] Route matched with {action = "Exchang", controller = "Transaction"}. Executing controller action with signature System.Threading.Tasks.ValueTask`1[Microsoft.AspNetCore.Mvc.IActionResult] Exchang(Currencyexchange.Models.ExchangRequest) on controller Currencyexchange.Controllers.TransactionController (Currencyexchange).
+2023-02-06 16:19:05.276 +04:00 [INF] Executing action method Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange) - Validation state: "Valid"
+2023-02-06 16:19:14.736 +04:00 [INF] The operation has timed out.
+2023-02-06 16:19:17.861 +04:00 [INF] Empty request result to https://api.apilayer.com/exchangerates_data/latest
+2023-02-06 16:19:32.206 +04:00 [INF] Executed DbCommand (115ms) [Parameters=[@p0='?' (DbType = Single), @p1='?' (DbType = Single), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Single), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Transactions] ([AmountFor], [AmountTo], [DateOfTransaction], [ExchangeKey], [ExchangeType], [ExchangeValue], [Status])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-02-06 16:19:32.271 +04:00 [INF] Executed action method Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26993.4957ms.
+2023-02-06 16:19:32.278 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Single'.
+2023-02-06 16:19:32.280 +04:00 [INF] Executed action Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange) in 27032.3202ms
+2023-02-06 16:19:32.291 +04:00 [INF] Executed endpoint 'Currencyexchange.Controllers.TransactionController.Exchang (Currencyexchange)'
+2023-02-06 16:19:32.295 +04:00 [INF] HTTP POST /api/transaction responded 200 in 27055.0724 ms
+2023-02-06 16:19:32.302 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7257/api/transaction application/json 43 - 200 - application/json;+charset=utf-8 27064.7197ms

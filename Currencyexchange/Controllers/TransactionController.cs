@@ -25,6 +25,7 @@ namespace Currencyexchange.Controllers
         [HttpGet ]
         public IActionResult Get()
         {
+            _logger.LogInformation("Get all");
             IEnumerable<Transaction> employees = _dataRepository.GetAll();
             return Ok(employees);
         }
@@ -34,6 +35,7 @@ namespace Currencyexchange.Controllers
         [HttpGet("{id}", Name = "Get")]
         public IActionResult Get(long id)
         {
+            _logger.LogInformation("Reading value for {Id}", id);
             Transaction transaction = _dataRepository.Get(id);
             if (transaction == null)
             {
@@ -48,7 +50,7 @@ namespace Currencyexchange.Controllers
         [HttpPost]
         public async ValueTask<IActionResult> Exchang([FromBody] ExchangRequest exchangRequest)
         {
-            _logger.LogInformation("Add transaction");
+            _logger.LogDebug("Add transaction");
           var result= await _exchangService.Exchang(exchangRequest);
 
             return Ok(result);    

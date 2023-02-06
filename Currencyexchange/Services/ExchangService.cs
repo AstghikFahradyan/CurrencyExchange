@@ -1,4 +1,5 @@
-﻿using Currencyexchange.DataSource;
+﻿using Currencyexchange.Controllers;
+using Currencyexchange.DataSource;
 using Currencyexchange.Models;
 using Currencyexchange.Services.Interface;
 using Microsoft.EntityFrameworkCore;
@@ -13,11 +14,12 @@ namespace Currencyexchange.Services
         private TransactionContext _context;     
         public bool responseInGzip = true;
         public static readonly string rateApiURL = "https://api.apilayer.com/exchangerates_data/latest";
+        private readonly ILogger<ExchangService> _logger;
 
-
-        public ExchangService(TransactionContext context)
+        public ExchangService(TransactionContext context, ILogger<ExchangService> logger)
         {
             _context = context;
+            _logger = logger;   
            
         }
 
@@ -26,7 +28,11 @@ namespace Currencyexchange.Services
         {
 
             var requestResult = FetchRates();
-            if (string.IsNullOrEmpty(requestResult)) return 0;
+            if (string.IsNullOrEmpty(requestResult))
+            {
+                _logger.LogInformation($"Empty request result to {rateApiURL}");
+                return 0;
+            }
             string status = "successful";
             JObject json = JObject.Parse(requestResult);
             var ratesData = json["rates"];
@@ -88,8 +94,7 @@ namespace Currencyexchange.Services
             }
             catch (Exception ex)
             {
-              
-
+                _logger.LogInformation(ex.Message);
             }
             return "";
         }
